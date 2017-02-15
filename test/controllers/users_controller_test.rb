@@ -9,6 +9,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get users_url
     assert_response :success
   end
+  
 
   test "should get new" do
     get new_user_url
@@ -42,7 +43,5 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_difference('User.count', -1) do
       delete user_url(@user)
     end
-
-    assert_redirected_to users_url
   end
 end
